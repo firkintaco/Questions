@@ -7,7 +7,8 @@ const App = () => {
   const [activeId, setActiveId] = useState(null);
 
   const toggleQuestion = (id) => {
-    setActiveId(id);
+    const newActiveId = activeId === id ? null : id;
+    setActiveId(newActiveId);
   };
 
   return (
